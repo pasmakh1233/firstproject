@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GoldenLine Website">
+    <meta name="keywords" content="GoldenLine">
+    <title>dashboard</title>
+    <link rel="stylesheet" href="/static/dashboard.css" media="screen">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/static/chartscript.js"></script>
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+</head>
+
+<body data-home-page="https://website5793840.nicepage.io/main.html?version=36971618-3f23-43af-bb2b-e8488bbc609e" data-home-page-title="Main Page" class="u-body u-xl-mode" data-lang="en">
+    <section class="tab-container u-clearfix u-container-align-center-xl u-grey-90" id="chart_section">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <h2 class="u-align-center u-custom-font u-font-montserrat u-text u-text-default">Golden<span class="u-text-palette-3-dark-1">Line</span>
+            </h2>
+            <div class="tab-links u-expanded-width u-tab-links-align-justify u-tabs">
+                <ul class="tab-list u-spacing-0 u-unstyled" role="tablist">
+                    <li class="tab-head" role="presentation">
+                        <a class="active u-active-palette-3-dark-1 u-tab-link" id="total_tab" onclick="loadChart1(); return false;" role="tab" aria-controls="total_tab" aria-selected="true">Total</a>
+                    </li>
+                    <li class="tab-head" role="presentation">
+                        <a class="u-active-palette-3-dark-1 u-tab-link" id="average_tab" onclick="loadChart2(); return false;" role="tab" aria-controls="average_tab" aria-selected="false">Average</a>
+                    </li>
+                    <li class="tab-head" role="presentation">
+                        <a class="u-active-palette-3-dark-1 u-tab-link" id="export_tab" onclick="toggleForm()" role="tab" aria-controls="export_tab" aria-selected="false">Export</a>
+                    </li>
+                </ul>
+                <div class="u-tab-content">
+                    <div class="tab-content u-align-left u-container-align-center-xl u-container-style u-tab-active u-white" id="total_tab_content" role="tabpanel" aria-labelledby="total_tab">
+                        <canvas class="u-container-layout" id="chart_canvas"></canvas>
+                        <div class="u-container-layout" id="form_container" style="display: none;">
+                            <form id="chart_form" method="POST" action="/generate_excel">
+                                <label for="cart_count">Number of Carts:</label>
+                                <input type="text" id="cart_count" name="cart_count"><br><br>
+                                <input type="submit" value="Generate Excel">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        </div>
+    </section>
+    <div class="u-container-layout" id="logout_container">
+        <form id="logout_form" method="POST" action="/logout">
+            <br>
+            <button class="u-button-style u-custom-color-1 u-hover-custom-color-2 u-btn-1" type="submit">Logout</button>
+        </form>
+
+</body>
+
+</html>

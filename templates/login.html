@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to GoldenLine</title>
+    <link rel="stylesheet" href="/static/login.css">
+</head>
+
+<body>
+
+
+
+    <div class="wrapper">
+        <form method="POST" action="/login">
+            <h2>Login</h2>
+            <div class="input-field">
+                <input id="username" name="username" type="text" required>
+                <label>Enter your username</label>
+            </div>
+            <div class="input-field">
+                <input id="password" name="password" type="password" required>
+                <label>Enter your password</label>
+            </div>
+            <div>
+                <br><br><br>
+                <button type="submit">Log In</button>
+            </div>
+
+        </form>
+        {% with messages = get_flashed_messages(with_categories=true) %} {% if messages %}
+        <div>
+            {% for category, message in messages %}
+            <br><br>
+            <h3>{{ message }}</h3>
+            {% endfor %}
+        </div>
+        {% endif %} {% endwith %}
+    </div>
+
+</body>
+
+</html>
