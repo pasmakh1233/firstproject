@@ -1,13 +1,14 @@
 from psycopg2 import pool
+import os
 
 # Initialize a connection pool
 db_pool = pool.SimpleConnectionPool(
     minconn=1, maxconn=10,
-    user="postgres",
-    password="1234",
-    host="localhost",
-    port="5432",
-    database="Goldenline_new"
+    user=os.environ.get('DBUSER'),
+    password=os.environ.get('DBPASSWORD'),
+    host=os.environ.get('DBHOST'),
+    port=os.environ.get('DBPORT'),
+    database=os.environ.get('DBNAME')
 )
 
 
