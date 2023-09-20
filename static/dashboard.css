@@ -1,0 +1,166 @@
+/* Reset some default styles */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FDFDFD;
+}
+
+
+/* Global styles */
+
+.u-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+/* Header styles */
+
+.u-sheet {
+    background-color: #FFD700;
+    /* Gold color */
+    padding: 40px 0;
+    text-align: center;
+}
+
+.u-custom-font {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+    /* Dark text color */
+}
+
+
+/* Tab styles */
+
+.u-tabs {
+    background-color: #333;
+    /* Dark background color for tabs */
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.tab-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.tab-head {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.u-tab-link {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #FFD700;
+    /* Gold color for tab links */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.u-tab-link:hover {
+    background-color: #FFD700;
+    /* Gold color on hover */
+    color: #333;
+    /* Dark text color on hover */
+}
+
+
+/* Tab content styles */
+
+.tab-content {
+    background-color: #FFF;
+    /* White background for tab content */
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+}
+
+
+/* Chart canvas styles */
+
+#chart_canvas {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+/* Form container styles */
+
+#form_container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#chart_form {
+    display: inline-block;
+    text-align: left;
+}
+
+label {
+    font-weight: 600;
+    color: #333;
+    /* Dark text color */
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #333;
+    /* Dark border color */
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #FFD700;
+    /* Gold color for submit button */
+    color: #333;
+    /* Dark text color for button text */
+    border: none;
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #333;
+    /* Dark background on hover */
+    color: #FFD700;
+    /* Gold text color on hover */
+}
+
+.u-button-style {
+    background-color: #FFD700;
+    /* Golden color */
+    color: #333;
+    /* Dark text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.u-button-style:hover {
+    background-color: #333;
+    /* Dark background on hover */
+    color: #FFD700;
+    /* Golden text color on hover */
+}
+
+#logout_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
